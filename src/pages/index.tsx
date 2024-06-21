@@ -22,7 +22,7 @@ export default function Home() {
   const handleBillChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     let input = event.target.value;
     input = input.replace(/[^0-9.]/g, "");
-    let inputNumber = parseInt(input.replace(".", ""));
+    const inputNumber = parseInt(input.replace(".", ""));
     if (input === "") {
       setBillAmount("");
     } else {
